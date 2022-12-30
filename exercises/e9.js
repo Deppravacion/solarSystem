@@ -6,6 +6,9 @@ import { data } from "../data/data";
 
 export function getEarthData(data) {
   // Your code goes here...
+  const planets = data.planets
+  const earth = planets[6]
+  return earth
 }
 
 
