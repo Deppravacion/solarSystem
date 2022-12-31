@@ -6,9 +6,8 @@ import { data } from "../data/data";
 
 export function getAsteroidDataByName(data, asteroidName) {
   // Your code goes here...
-  const asteroids = data.asteroids
-  const roidByName = asteroids.filter(roid => roid.name.includes(asteroidName))
-  return roidByName[0]
+
+  return data.asteroids.find(roid => roid.name.includes(asteroidName))
 }
 
 

@@ -11,19 +11,18 @@ export function getGreatestDiscoveryYear(data) {
   
   const roids = data.asteroids
   const pushYearArr = roids.map(roid => yearArr.push(roid.discoveryYear))
-  const numberOfOccurances = yearArr.reduce((acc, cval) => {
+  const numberOfOccurrences = yearArr.reduce((acc, cval) => {
     acc[cval] = acc[cval] + 1 || 1
     return acc
   }, {})
-  const pushTotalsArr = totalsArr.push(numberOfOccurances)
+  const pushTotalsArr = totalsArr.push(numberOfOccurrences)
   const highScore = Object.values(totalsArr[0]).reduce((acc, cval) => cval>acc ? cval : acc)
   const objEntries = Object.entries(totalsArr[0])
   const filterHighScore = objEntries.filter(elm => elm[1] === highScore )
-  const convertGreatestDicoveryYear = filterHighScore[0]
-  const greatestDicoveryYear = parseInt(convertGreatestDicoveryYear[0])
+  const convertGreatestDiscoveryYear = filterHighScore[0]
+  const greatestDiscoveryYear = parseInt(convertGreatestDiscoveryYear[0])  
   
-  
-  return greatestDicoveryYear
+  return greatestDiscoveryYear
 }
 
 
