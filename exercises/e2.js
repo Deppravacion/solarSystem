@@ -4,11 +4,9 @@ import { data } from "../data/data";
 // Return an array of all Asteroids' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getAsteroidNames(data) {
+export function getAsteroidNames({asteroids}) {
   // Your code goes here...
-  const asteroids = data.asteroids;
-  const asteroidNames = asteroids.map(roid => roid.name)
-  return asteroidNames;
+  return asteroids.map(spaceRock => spaceRock.name )
 }
 
 
