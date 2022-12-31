@@ -4,11 +4,9 @@ import { data } from "../data/data";
 // Return an array of all Planets' names
 // Return example: ['name1', 'name2', ... , 'nameN']
 
-export function getPlanetNames(data) {
+export function getPlanetNames({planets}) {
   // Your code goes here...
-  const planets = data.planets;
-  const planetNames = planets.map(planet => planet.name)
-  return planetNames
+  return planets.map(planet => planet.name)
 }
 
 
