@@ -8,10 +8,8 @@ export function findPlanetNameByMoon(data, moonName) {
   // Your code goes here...
   return data.planets.filter(planet => 
     planet.hasOwnProperty('moons') 
-    && planet.moons.length > 1 
+    && planet.moons.length > 0
     && planet.moons.includes(moonName))[0].name
-
-
 }
 
 

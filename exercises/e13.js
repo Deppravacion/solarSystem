@@ -4,11 +4,10 @@ import { data } from "../data/data";
 // Return the average temperature of all the Planets
 // Return example: 132.53
 
-export function getAveragePlanetsTemperature(data) {
-  // Your code goes here...
-  const planetTemps = data.planets.map(planet => planet.avgTemp)
-  const averageTemp = (planetTemps.reduce((acc, cv) => acc + cv))/(planetTemps.length)
-  return averageTemp
+export function getAveragePlanetsTemperature({planets}) {
+  return data.asteroids.reduce((acc, roid) => {
+    return (acc + roid.orbitalPeriod)
+  },0)
 }
 
 
