@@ -5,9 +5,9 @@ import { data } from "../data/data";
 // Return example: 132.53
 
 export function getAveragePlanetsTemperature({planets}) {
-  return data.asteroids.reduce((acc, roid) => {
-    return (acc + roid.orbitalPeriod)
-  },0)
+  return planets.reduce((acc, planet) => {   
+   return  (acc + planet.avgTemp)/planets.length;
+  },0)  
 }
 
 

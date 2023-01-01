@@ -6,8 +6,7 @@ import { data } from "../data/data";
 
 export function getPlanetsWithNoMoons(data) {
   return data.planets.reduce((acc, planet) => {
-    !planet.moons ? acc.push(planet.name) : acc
-    return acc
+    return !planet.moons ? [...acc, planet.name] : acc   
   },[])
 }
 
