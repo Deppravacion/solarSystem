@@ -9,6 +9,7 @@ export function find(array, callback) {
     if(callback(elm)) {
       return elm
     }
+    undefined 
   }
 }
 
