@@ -4,9 +4,14 @@
 // Return the year with the greatest number of Asteroids discoveries
 // Return example: 1902
 
-export function getGreatestDiscoveryYear(data) {
-  // Your code goes here...
+export function find(array, callback) {
+  for (let elm of array) {
+    if(callback(elm)) {
+      return elm
+    }
+  }
 }
+
 
 
 
@@ -14,3 +19,4 @@ export function getGreatestDiscoveryYear(data) {
 // Once you're finished run the test with "npm run test-16"
 // If the test has all tests passed, switch to the next exercise file
 // If any of the tests fails, refactor the code and run the test command after you've fixed the function
+
