@@ -6,8 +6,7 @@ export function minBy(array, cb) {
       return min = elm 
     }    
   }
-} 
-    
+}     
 
 export function maxBy(array, cb) {
   let min = array[0]

@@ -4,7 +4,14 @@ import { data } from "../data/data";
 // Return the year with the greatest number of Asteroids discoveries
 // Return example: 1902
 
-export function getGreatestDiscoveryYear(data) {
+export function getGreatestDiscoveryYear({asteroids}) {
+  const discoveries = asteroids.reduce((acc, year) => {
+    return {
+      ...acc, 
+      [year.discoveryYear]: (acc[year.discoveryYear] ?? 0) +1
+    }
+  }, {})
+
 
 }
 
