@@ -11,8 +11,9 @@ export function getGreatestDiscoveryYear({asteroids}) {
       [year.discoveryYear]: (acc[year.discoveryYear] ?? 0) +1
     }
   }, {})
-
-
+  const yearArray = Object.entries(discoveries); yearArray
+  const myCB = (item) => item[1];
+  return maxBy(yearArray, myCB )
 }
 
 // === TEST YOURSELF ===
