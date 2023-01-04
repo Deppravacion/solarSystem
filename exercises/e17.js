@@ -9,7 +9,6 @@ export function minBy(array, cb) {
   }
 }   
 
-
 export function maxBy(array, cb) {
   let min = array[0]; 
   for ( let elm of array) {
