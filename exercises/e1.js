@@ -6,7 +6,10 @@ import { data } from "../data/data";
 
 export function getPlanetNames({planets}) {
   // Your code goes here...
-  return planets.map(planet => planet.name)
+  // return planets.map(planet => planet.name)
+  planets.reduce((acc, planet) => {
+    return [...acc, planet.name];
+  },[])
 }
 
 
