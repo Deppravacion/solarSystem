@@ -6,7 +6,7 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   return data.planets.reduce((acc, planet) => {
-    const safeMoonCount = planet.moonsCount ?? 0;
+    const safeMoonCount = planet.moonsCount ?? 0; 
     return acc + safeMoonCount;    
   },0)
 }
