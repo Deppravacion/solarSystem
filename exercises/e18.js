@@ -5,27 +5,28 @@ import { data } from "../data/data";
 // Return example: 1902
 
 export function getGreatestDiscoveryYear({asteroids}) {
-  function maxBy(array, cb) {
-    let min = array[0]
-    let result = parseInt(min[0]) ?? 0
-    for ( let elm of array) {
-      if (cb(elm) > cb(min)) {
-        min = elm
-        return result;
-      }    
-    }
-    return result;
-  }
-  const discoveries = asteroids.reduce((acc, year) => {
-    
+  const discoveries = asteroids.reduce((acc, year) => {    
     return {
       ...acc, 
       [year.discoveryYear]: (acc[year.discoveryYear] ?? 0) +1
     }
-  }, {})
-  const yearArray = Object.entries(discoveries); yearArray
-  const myCB = (item) => item[0];
-  return maxBy(yearArray, myCB);   
+  }, {}); 
+  discoveries
+  return maxBy(discoveries); 
+
+  
+  function maxBy(array) {
+    let max = 0
+    let mxKey = ''
+
+    for(let rank in discoveries) {
+      if (discoveries[rank] > max) {
+        max = discoveries[rank]
+        mxKey = rank; rank
+      }
+    }
+    return +mxKey
+  }  
 }
 
 // === TEST YOURSELF ===
